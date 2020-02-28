@@ -45,7 +45,8 @@ def scrape(language, filename):
     print(len(items))
 
     # codecs to solve the problem utf-8 codec like chinese
-    with codecs.open(filename, "a", "utf-8") as f:
+    filepath = '2020'+os.sep +filename
+    with codecs.open(filepath, "a", "utf-8") as f:
         f.write('\n#### {language}\n'.format(language=language))
 
         for item in items:
@@ -66,6 +67,7 @@ def job():
     filename = '{date}.md'.format(date=strdate)
 
     # create markdown file
+#    filepath = '2020'+os.sep +filename
     createMarkdown(strdate, filename)
 
     # write markdown
