@@ -19,7 +19,8 @@ def git_add_commit_push(date, filename):
 
 
 def createMarkdown(date, filename):
-    with open(filename, 'w') as f:
+    filepath = '2020'+os.sep +filename
+    with open(filepath, 'w') as f:
         f.write("## " + date + "\n")
 
 
